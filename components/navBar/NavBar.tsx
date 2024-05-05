@@ -3,6 +3,12 @@ import Link from "next/link";
 import React from "react";
 
 export const NavBar = () => {
+	const ITEMS = ["about", "pricing", "contact"];
+
+	const capitalize = (word: string) => {
+		return word[0].toUpperCase() + word.slice(1);
+	};
+
 	return (
 		<nav className='flex bg-blue-800 bg-opacity-30 p-2 m-2'>
 			<Link className='mr-2' href='/'>
@@ -10,15 +16,12 @@ export const NavBar = () => {
 				<span>Home</span>
 			</Link>
 			<div className='flex flex-1'></div>
-			<Link className='mr-2' href='/about'>
-				About
-			</Link>
-			<Link className='mr-2' href='/pricing'>
-				Pricing
-			</Link>
-			<Link className='mr-2' href='/contact'>
-				Contact
-			</Link>
+
+			{ITEMS.map((e) => (
+				<Link key={e} className='mr-2' href={`/${e}`}>
+					{capitalize(e)}
+				</Link>
+			))}
 		</nav>
 	);
 };
