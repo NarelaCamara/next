@@ -1,13 +1,10 @@
 import { HomeIcon } from "@primer/octicons-react";
 import Link from "next/link";
 import React from "react";
+import { ActiveLink } from "@/components";
 
 export const NavBar = () => {
 	const ITEMS = ["about", "pricing", "contact"];
-
-	const capitalize = (word: string) => {
-		return word[0].toUpperCase() + word.slice(1);
-	};
 
 	return (
 		<nav className='flex bg-blue-800 bg-opacity-30 p-2 m-2'>
@@ -18,9 +15,7 @@ export const NavBar = () => {
 			<div className='flex flex-1'></div>
 
 			{ITEMS.map((e) => (
-				<Link key={e} className='mr-2' href={`/${e}`}>
-					{capitalize(e)}
-				</Link>
+				<ActiveLink word={e} key={e} />
 			))}
 		</nav>
 	);
