@@ -6,15 +6,21 @@ import SidebarMenuItem from "../sidebarMenuItem/SidebarMenuItem";
 export const Sidebar = () => {
   const ROUTES = [
     {
-      path: "/dashboard/main",
+      path: "/main",
       title: "Dashboard",
       subTitle: "Visualization",
       icon: <IoBrowsersOutline width={50} />,
     },
     {
-      path: "/dashboard/counter",
+      path: "/counter",
       title: "Counter",
       subTitle: "Conunter Cliente Side",
+      icon: <IoCalculator width={50} />,
+    },
+    {
+      path: "/contact",
+      title: "Contact",
+      subTitle: "Contact with futures clients",
       icon: <IoCalculator width={50} />,
     },
   ];
