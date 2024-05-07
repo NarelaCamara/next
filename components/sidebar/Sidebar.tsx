@@ -1,21 +1,21 @@
 import Image from "next/image";
 import React from "react";
-import { IoLogoAndroid, IoLogoReact } from "react-icons/io5";
+import { IoBrowsersOutline, IoCalculator, IoLogoReact } from "react-icons/io5";
 import SidebarMenuItem from "../sidebarMenuItem/SidebarMenuItem";
 
 export const Sidebar = () => {
   const ROUTES = [
     {
-      path: "",
-      title: "",
-      subTitle: "",
-      icon: <IoLogoAndroid width={50} />,
+      path: "/dashboard/main",
+      title: "Dashboard",
+      subTitle: "Visualization",
+      icon: <IoBrowsersOutline width={50} />,
     },
     {
-      path: "",
-      title: "",
-      subTitle: "",
-      icon: <IoLogoAndroid width={50} />,
+      path: "/dashboard/counter",
+      title: "Counter",
+      subTitle: "Conunter Cliente Side",
+      icon: <IoCalculator width={50} />,
     },
   ];
 
@@ -51,13 +51,7 @@ export const Sidebar = () => {
       </div>
       <div id="nav" className="w-full px-6">
         {ROUTES.map((e) => (
-          <SidebarMenuItem
-            key={e.title}
-            path={e.path}
-            title={e.title}
-            subTitle={e.subTitle}
-            icon={e.icon}
-          />
+          <SidebarMenuItem key={e.title} {...e} />
         ))}
       </div>
     </div>
