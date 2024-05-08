@@ -6,22 +6,22 @@ import { usePathname } from "next/navigation";
 import style from "./ActiveLink.module.css";
 
 interface Props {
-	word: string;
+  word: string;
 }
 
 export const ActiveLink = ({ word }: Props) => {
-	const capitalize = (word: string) => {
-		return word[0].toUpperCase() + word.slice(1);
-	};
+  const capitalize = (word: string) => {
+    return word[0].toUpperCase() + word.slice(1);
+  };
 
-	const pathName = usePathname();
-	console.log(pathName);
-	return (
-		<Link
-			key={word}
-			className={`${style.link} ${pathName === word && style["active-link"]}`}
-			href={`/${word}`}>
-			{capitalize(word)}
-		</Link>
-	);
+  const pathName = usePathname();
+  return (
+    <Link
+      key={word}
+      className={`${style.link} ${pathName === word && style["active-link"]}`}
+      href={`/${word}`}
+    >
+      {capitalize(word)}
+    </Link>
+  );
 };

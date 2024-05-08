@@ -1,10 +1,11 @@
-import { NavBar, Sidebar } from "@/components";
+import { Sidebar } from "@/components";
 
 export default function AboutLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+ 
   return (
     <>
       {

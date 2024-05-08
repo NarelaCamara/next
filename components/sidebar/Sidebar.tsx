@@ -2,23 +2,24 @@ import Image from "next/image";
 import React from "react";
 import { IoBrowsersOutline, IoCalculator, IoLogoReact } from "react-icons/io5";
 import SidebarMenuItem from "../sidebarMenuItem/SidebarMenuItem";
+import { usePathname } from "next/navigation";
 
 export const Sidebar = () => {
   const ROUTES = [
     {
-      path: "/main",
+      path: "main",
       title: "Dashboard",
       subTitle: "Visualization",
       icon: <IoBrowsersOutline width={50} />,
     },
     {
-      path: "/counter",
+      path: "counter",
       title: "Counter",
       subTitle: "Conunter Cliente Side",
       icon: <IoCalculator width={50} />,
     },
     {
-      path: "/contact",
+      path: "contact",
       title: "Contact",
       subTitle: "Contact with futures clients",
       icon: <IoCalculator width={50} />,

@@ -1,3 +1,5 @@
+"use client";
+import { usePathname } from "next/navigation";
 import * as React from "react";
 
 export interface Props {
@@ -13,10 +15,14 @@ export default function SidebarMenuItem({
   subTitle,
   icon,
 }: Props) {
+  const pathName = usePathname();
+  console.log(pathName);
   return (
     <a
-      href={path}
-      className="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 bg-blue-800 hover:bg-white/5 transition ease-linear duration-150"
+      href={`/${path}`}
+      className={`w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150 ${
+        pathName === `/${path}` && "bg-blue-800"
+      } `}
     >
       <div>{icon}</div>
       <div className="flex flex-col">
