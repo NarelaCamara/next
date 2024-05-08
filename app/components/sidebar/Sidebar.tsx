@@ -24,6 +24,18 @@ export const Sidebar = () => {
       subTitle: "Contact with futures clients",
       icon: <IoCalculator width={50} />,
     },
+    {
+      path: "pricing",
+      title: "Pricing",
+      subTitle: "Pricing with futures clients",
+      icon: <IoCalculator width={50} />,
+    },
+    {
+      path: "about",
+      title: "About",
+      subTitle: "About with futures clients",
+      icon: <IoCalculator width={50} />,
+    },
   ];
 
   return (
