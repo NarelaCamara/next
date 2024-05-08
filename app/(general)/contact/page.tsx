@@ -43,7 +43,7 @@ export default function ContactPage() {
                   />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                  Acme Inc, Street, State, Postal Code
+                  Buenos Aires, Argentina
                 </div>
               </div>
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
                   />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                  +44 1234567890
+                  +54 9 1125178631
                 </div>
               </div>
 
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                  info@acme.org
+                  roxana.camara@gmail.com
                 </div>
               </div>
             </div>
