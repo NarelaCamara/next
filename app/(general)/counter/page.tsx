@@ -1,7 +1,6 @@
 "use client";
 import { CartCounter } from "@/app/components";
 import { Metadata } from "next";
-import * as React from "react";
 
 export const metadata: Metadata = {
   title: "Counter",
