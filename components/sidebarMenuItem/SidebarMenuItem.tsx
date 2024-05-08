@@ -16,7 +16,6 @@ export default function SidebarMenuItem({
   icon,
 }: Props) {
   const pathName = usePathname();
-  console.log(pathName);
   return (
     <a
       href={`/${path}`}
