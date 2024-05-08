@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Nare App",
-	description: "Pricing Nare",
+  title: "Pricing",
+  description: "Pricing",
 };
 
 export default function PricingPage() {
-	return (
-		<>
-			<span className='text-7xl'>Pricing</span>
-		</>
-	);
+  return (
+    <>
+      <span className="text-7xl">Pricing</span>
+    </>
+  );
 }

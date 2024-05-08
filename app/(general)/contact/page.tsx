@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nare App",
-  description: "Contact Nare",
+  title: "Contact",
+  description: "Contact",
 };
 
 export default function ContactPage() {
