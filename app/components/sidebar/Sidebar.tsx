@@ -8,7 +8,7 @@ export const Sidebar = () => {
   const ROUTES = [
     {
       path: "main",
-      title: "Dashboard",
+      title: "Main",
       subTitle: "Visualization",
       icon: <IoBrowsersOutline width={50} />,
     },

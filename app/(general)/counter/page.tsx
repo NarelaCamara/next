@@ -1,4 +1,3 @@
-"use client";
 import { CartCounter } from "@/app/components";
 import { Metadata } from "next";
 
