@@ -1,25 +1,42 @@
+import { CardPokemon } from "@/app/components/cardPokemon/CardPokemon";
 import { Metadata } from "next";
 import * as React from "react";
 
 export const metadata: Metadata = {
-  title: "Main",
-  description: "Main",
+	title: "Main",
+	description: "Main",
 };
 const URL_API = "https://pokeapi.co/api/v2/";
 
 const getPokemons = async (cantidad: number) => {
-  let n = await fetch(`${URL_API}pokemon?limit=${cantidad}&offset=0`)
-    .then((resp) => resp)
-    .catch((error) => error);
-  console.log(n);
-  return n;
+	const result = await fetch(`${URL_API}pokemon?limit=${cantidad}&offset=0`, {
+		cache: "no-store",
+	})
+		.then((resp) => resp.json())
+		.catch((error) => error.json());
+
+	const pokemons = result.results.map((e: any) => {
+		return {
+			id: e.url.split("/").at(-2)!,
+			...e,
+		};
+	});
+	return pokemons;
 };
 
 export interface IPageProps {}
 
 export default async function MainPage(props: IPageProps) {
-  let n = getPokemons(12);
-  console.log(n);
+	const pokemons = await getPokemons(52);
 
-  return <div>nare</div>;
+	return (
+		<div>
+			<h1>Pokemons</h1>
+			<div className='flex flex-wrap'>
+				{pokemons.map((elem: any) => (
+					<CardPokemon key={elem.name} {...elem} />
+				))}
+			</div>
+		</div>
+	);
 }
