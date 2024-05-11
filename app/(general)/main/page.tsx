@@ -10,10 +10,7 @@ const URL_API = "https://pokeapi.co/api/v2/";
 
 const getPokemons = async (cantidad: number) => {
 	const data: { results: [] } = await fetch(
-		`${URL_API}pokemon?limit=${cantidad}&offset=0`,
-		{
-			cache: "no-store",
-		}
+		`${URL_API}pokemon?limit=${cantidad}&offset=0`
 	)
 		.then((resp) => resp.json())
 		.catch((error) => error);
