@@ -9,18 +9,24 @@ export const metadata: Metadata = {
 const URL_API = "https://pokeapi.co/api/v2/";
 
 const getPokemons = async (cantidad: number) => {
-	const result = await fetch(`${URL_API}pokemon?limit=${cantidad}&offset=0`, {
-		cache: "no-store",
-	})
-		.then((resp) => resp.json())
-		.catch((error) => error.json());
+	const { results } = await fetch(
+		`${URL_API}pokemon?limit=${cantidad}&offset=0`,
+		{
+			cache: "no-store",
+		}
+	)
+		.then((resp) => resp)
+		.catch((error) => error);
 
-	const pokemons = result.results.map((e: any) => {
-		return {
-			id: e.url.split("/").at(-2)!,
-			...e,
-		};
-	});
+	const pokemons =
+		(!!results &&
+			results.map((e: any) => {
+				return {
+					id: e.url.split("/").at(-2)!,
+					...e,
+				};
+			})) ||
+		[];
 	return pokemons;
 };
 
