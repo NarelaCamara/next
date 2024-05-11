@@ -35,7 +35,6 @@ export default async function MainPage(props: IPageProps) {
 	return (
 		<div className='flex flex-col'>
 			<span className='text-5xl my-2'> Pokemons </span>
-			{JSON.stringify(pokemons)}
 			<div className='flex flex-wrap gap-10 items-center justify-center'>
 				{pokemons?.map((elem: any) => (
 					<CardPokemon key={elem.name} {...elem} />
