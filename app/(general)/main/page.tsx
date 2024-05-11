@@ -9,24 +9,21 @@ export const metadata: Metadata = {
 const URL_API = "https://pokeapi.co/api/v2/";
 
 const getPokemons = async (cantidad: number) => {
-	const { results } = await fetch(
+	const data: { results: [] } = await fetch(
 		`${URL_API}pokemon?limit=${cantidad}&offset=0`,
 		{
 			cache: "no-store",
 		}
 	)
-		.then((resp) => resp)
+		.then((resp) => resp.json())
 		.catch((error) => error);
 
-	const pokemons =
-		(!!results &&
-			results.map((e: any) => {
-				return {
-					id: e.url.split("/").at(-2)!,
-					...e,
-				};
-			})) ||
-		[];
+	const pokemons = data?.results?.map((e: any) => {
+		return {
+			...e,
+			id: e.url.split("/").at(-2)!,
+		};
+	});
 	return pokemons;
 };
 
@@ -38,8 +35,9 @@ export default async function MainPage(props: IPageProps) {
 	return (
 		<div className='flex flex-col'>
 			<span className='text-5xl my-2'> Pokemons </span>
+			{JSON.stringify(pokemons)}
 			<div className='flex flex-wrap gap-10 items-center justify-center'>
-				{pokemons.map((elem: any) => (
+				{pokemons?.map((elem: any) => (
 					<CardPokemon key={elem.name} {...elem} />
 				))}
 			</div>
