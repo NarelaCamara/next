@@ -30,9 +30,9 @@ export default async function MainPage(props: IPageProps) {
 	const pokemons = await getPokemons(52);
 
 	return (
-		<div>
-			<h1>Pokemons</h1>
-			<div className='flex flex-wrap'>
+		<div className='flex flex-col'>
+			<span className='text-5xl my-2'> Pokemons </span>
+			<div className='flex flex-wrap gap-10 items-center justify-center'>
 				{pokemons.map((elem: any) => (
 					<CardPokemon key={elem.name} {...elem} />
 				))}
