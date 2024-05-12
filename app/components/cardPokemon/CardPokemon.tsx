@@ -28,9 +28,11 @@ export function CardPokemon({ name, id, url }: ICardPokemonProps) {
 					<p className='pt-2 text-lg font-semibold text-gray-50'>{name}</p>
 
 					<div className='mt-5'>
-						<a className='border rounded-full py-2 px-4 text-xs font-semibold text-gray-100'>
+						<Link
+							href={`/pokemons/${name}`}
+							className='border rounded-full py-2 px-4 text-xs font-semibold text-gray-100'>
 							Manage your Account
-						</a>
+						</Link>
 					</div>
 				</div>
 				<div className='border-b'>
