@@ -1,4 +1,5 @@
 import { CardPokemon } from "@/app/components/cardPokemon/CardPokemon";
+import { URL_API } from "@/app/helpers/constants";
 import { Metadata } from "next";
 import * as React from "react";
 
@@ -6,11 +7,10 @@ export const metadata: Metadata = {
 	title: "Main",
 	description: "Main",
 };
-const URL_API = "https://pokeapi.co/api/v2/";
 
 const getPokemons = async (cantidad: number) => {
 	const data: { results: [] } = await fetch(
-		`${URL_API}pokemon?limit=${cantidad}&offset=0`
+		`${URL_API}/pokemon?limit=${cantidad}&offset=0`
 	)
 		.then((resp) => resp.json())
 		.catch((error) => error);
