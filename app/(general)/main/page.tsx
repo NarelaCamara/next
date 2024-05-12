@@ -1,5 +1,5 @@
 import { CardPokemon } from "@/app/components/cardPokemon/CardPokemon";
-import { URL_API } from "@/app/helpers/constants";
+import { getPokemons } from "@/app/helpers/utils";
 import { Metadata } from "next";
 import * as React from "react";
 
@@ -8,26 +8,10 @@ export const metadata: Metadata = {
 	description: "Main",
 };
 
-const getPokemons = async (cantidad: number) => {
-	const data: { results: [] } = await fetch(
-		`${URL_API}/pokemon?limit=${cantidad}&offset=0`
-	)
-		.then((resp) => resp.json())
-		.catch((error) => error);
-
-	const pokemons = data?.results?.map((e: any) => {
-		return {
-			...e,
-			id: e.url.split("/").at(-2)!,
-		};
-	});
-	return pokemons;
-};
-
 export interface IPageProps {}
 
 export default async function MainPage(props: IPageProps) {
-	const pokemons = await getPokemons(52);
+	const pokemons = await getPokemons(22);
 
 	return (
 		<div className='flex flex-col'>

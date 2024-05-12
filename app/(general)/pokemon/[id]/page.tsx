@@ -1,27 +1,13 @@
-import { URL_API } from "@/app/helpers/constants";
+import { getPokemonForId } from "@/app/helpers/utils";
 import { Metadata } from "next";
 import Image from "next/image";
-import { notFound } from "next/navigation";
 
 interface Props {
 	params: { id: string };
 }
 
-const getPokemon = async (id: string) => {
-	const pokemon = await fetch(`${URL_API}/pokemon/${id}`, {
-		next: {
-			revalidate: 60 * 60 * 30 * 6,
-		},
-	})
-		.then((resp) => resp.json())
-		.catch(() => notFound());
-	return pokemon;
-};
-
 export async function generateStaticParams() {
-	const STATIC_POKEMONS = Array.from({ length: 151 }).map(
-		(v, i) => `${i + 1}`
-	);
+	const STATIC_POKEMONS = Array.from({ length: 151 }).map((v, i) => `${i + 1}`);
 	return STATIC_POKEMONS.map((id) => ({
 		id,
 	}));
@@ -29,7 +15,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	try {
-		const pokemon = await getPokemon(params.id);
+		const pokemon = await getPokemonForId(params.id);
 
 		return {
 			title: `#${params.id} -${pokemon.name}`,
@@ -38,12 +24,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	} catch (error) {}
 	return {
 		title: `Not Found`,
-		description: `Pokemon No encontrado`,
+		description: `Pokemon Not found for Id`,
 	};
 }
 
 export default async function PokemonPage({ params }: Props) {
-	const pokemon = await getPokemon(params.id);
+	const pokemon = await getPokemonForId(params.id);
 
 	return (
 		<div className='flex mt-5 flex-col items-center text-slate-800'>
