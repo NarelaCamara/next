@@ -1,17 +1,24 @@
 import { URL_API } from "@/app/helpers/constants";
 import { Metadata } from "next";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 interface Props {
 	params: { id: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-	const pokemon = await getPokemon(params.id);
+	try {
+		const pokemon = await getPokemon(params.id);
 
+		return {
+			title: `#${params.id} -${pokemon.name}`,
+			description: `Pokemon ${pokemon.name}`,
+		};
+	} catch (error) {}
 	return {
-		title: `#${params.id} -${pokemon.name}`,
-		description: `Pokemon ${pokemon.name}`,
+		title: `Not Found`,
+		description: `Pokemon No encontrado`,
 	};
 }
 
@@ -20,7 +27,7 @@ const getPokemon = async (id: string) => {
 		cache: "force-cache",
 	})
 		.then((resp) => resp.json())
-		.catch((error) => error);
+		.catch(() => notFound());
 	return pokemon;
 };
 
