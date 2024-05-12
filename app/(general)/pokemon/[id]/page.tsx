@@ -7,6 +7,26 @@ interface Props {
 	params: { id: string };
 }
 
+const getPokemon = async (id: string) => {
+	const pokemon = await fetch(`${URL_API}/pokemon/${id}`, {
+		next: {
+			revalidate: 60 * 60 * 30 * 6,
+		},
+	})
+		.then((resp) => resp.json())
+		.catch(() => notFound());
+	return pokemon;
+};
+
+export async function generateStaticParams() {
+	const STATIC_POKEMONS = Array.from({ length: 151 }).map(
+		(v, i) => `${i + 1}`
+	);
+	return STATIC_POKEMONS.map((id) => ({
+		id,
+	}));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	try {
 		const pokemon = await getPokemon(params.id);
@@ -21,15 +41,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		description: `Pokemon No encontrado`,
 	};
 }
-
-const getPokemon = async (id: string) => {
-	const pokemon = await fetch(`${URL_API}/pokemon/${id}`, {
-		cache: "force-cache",
-	})
-		.then((resp) => resp.json())
-		.catch(() => notFound());
-	return pokemon;
-};
 
 export default async function PokemonPage({ params }: Props) {
 	const pokemon = await getPokemon(params.id);
