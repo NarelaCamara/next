@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import COMPUTER from "../../assets/computer.jpg";
 
 export const metadata: Metadata = {
 	title: "About",
@@ -13,24 +14,16 @@ export default function AboutPage() {
 				<div className="container mx-auto">
 					<div className="flex justify-center">
 						<div className="flex flex-col gap-5 text-center">
-							<Image
-								width={150}
-								height={150}
-								alt="User_photo"
-								src="https://avatars.githubusercontent.com/u/8538468?v=4"
-							/>
 							<div className="flex flex-col gap-3">
-								<h1 className="font-bold text-6xl">
-									Maruf Sharia - NO DARLE BOLA POR AHORA
-								</h1>
+								<h1 className="font-bold text-6xl">Roxana Narela Camara</h1>
 								<p className="text-gray-500 text-sm">
-									Senior Full Stack Web Developer (Laravel, Vue, MySql)
+									Senior Full Stack Web Developer (React, Node js, MySql)
 								</p>
 							</div>
 							<a
 								href="#"
 								className="bg-gray-50 mx-auto w-32 text-center rounded-md p-2 border border-1 border-gray-100 hover:bg-white">
-								Hire me
+								Hire me!
 							</a>
 						</div>
 					</div>
@@ -40,11 +33,11 @@ export default function AboutPage() {
 				<div className="container mx-auto">
 					<div className="sm:columns-2">
 						<Image
-							width={50}
-							height={50}
+							width={800}
+							height={800}
 							alt="User photo"
-							className="sm:w-1/2 mb-10 sm:mb-0"
-							src="https://th.bing.com/th/id/OIG..x5DGrfb1HXjpZELjMgm?pid=ImgGn"
+							className="w-2/2 mb-10 sm:mb-0"
+							src={COMPUTER}
 						/>
 						<div>
 							<h2 className="text-bold text-2xl mb-3">
@@ -62,6 +55,36 @@ export default function AboutPage() {
 								development process, from discussion and collaboration.
 							</p>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" className="sm:p-10 lg:p-20 bg-gray-50">
+				<div className="container mx-auto">
+					<div className="sm:columns-2">
+						<div>
+							<h2 className="text-bold text-2xl mb-3">
+								Providing web solutions
+							</h2>
+							<p className="mb-5 text-sm text-gray-400">
+								Providing web solutions
+							</p>
+							<p className="text-gray-500 text-justify leading-10">
+								Hello there! I&aposm a full stack web developer, and I&aposm
+								very passionate and dedicated to my work. With more than 5 years
+								of experience as a professional web developer, With this time
+								period I have acquired the skills and knowledge necessary to
+								make your project a success. I enjoy every step of the
+								development process, from discussion and collaboration.
+							</p>
+						</div>
+						<Image
+							width={800}
+							height={800}
+							alt="User photo"
+							className="w-2/2 mb-10 sm:mb-0"
+							src={COMPUTER}
+						/>
 					</div>
 				</div>
 			</section>
@@ -310,17 +333,6 @@ export default function AboutPage() {
 			<footer className="bg-gray-50 lg:p-20 p-10">
 				<section className="container mx-auto">
 					<div className="sm:grid justify-between sm:grid-cols-2 lg:grid-cols-4">
-						<div className="flex gap-5 flex-col">
-							<Image
-								className="h-6 w-1/2"
-								src="https://rabiulislam.dev/documents/images/portfolio/portfolio.png"
-								alt="logo"
-								width={150}
-								height={150}
-							/>
-							<p>Portfolio is a kind of identity of yourself</p>
-						</div>
-
 						<div className="mt-10 sm:mt-0">
 							<h3 className="text-xl font-bold">Quick links</h3>
 							<ul>
