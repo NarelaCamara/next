@@ -8,14 +8,21 @@ export interface ICartCounterProps {
 	value?: number;
 }
 
+const getApiCounter = async () => {
+	const data = await fetch("/api/counter")
+		.then((e) => e.json())
+		.catch((e) => e);
+	return data;
+};
+
 export const CartCounter = ({ value = 0 }: ICartCounterProps) => {
 	const count = useAppSelector((state) => state.counter.count);
 	const dispatch = useAppDispatch();
 	//const [count, setCount] = React.useState(5);
 
 	useEffect(() => {
-		dispatch(initCounter(value));
-	}, [dispatch, value]);
+		getApiCounter().then((e) => dispatch(initCounter(e.count)));
+	}, [dispatch]);
 
 	return (
 		<>
