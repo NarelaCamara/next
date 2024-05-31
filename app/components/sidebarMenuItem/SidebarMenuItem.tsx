@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
 
@@ -17,7 +18,7 @@ export default function SidebarMenuItem({
 }: Props) {
 	const pathName = usePathname();
 	return (
-		<a
+		<Link
 			href={`/${path}`}
 			className={`w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150 ${
 				pathName === `/${path}` && "bg-blue-800"
@@ -29,6 +30,6 @@ export default function SidebarMenuItem({
 					{subTitle}
 				</span>
 			</div>
-		</a>
+		</Link>
 	);
 }

@@ -3,6 +3,7 @@ import React from "react";
 import { IoBrowsersOutline, IoCalculator, IoLogoReact } from "react-icons/io5";
 import SidebarMenuItem from "../sidebarMenuItem/SidebarMenuItem";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export const Sidebar = () => {
 	const ROUTES = [
@@ -56,7 +57,7 @@ export const Sidebar = () => {
 
 			<div id='profile' className='px-6 py-10'>
 				<p className='text-slate-500'>Welcome back,</p>
-				<a href='#' className='inline-flex space-x-2 items-center'>
+				<Link href='#' className='inline-flex space-x-2 items-center'>
 					<span>
 						<Image
 							className='rounded-full w-8 h-8'
@@ -70,7 +71,7 @@ export const Sidebar = () => {
 					<span className='text-sm md:text-base font-bold'>
 						Fernando Herrera
 					</span>
-				</a>
+				</Link>
 			</div>
 
 			<div id='nav' className='w-full px-6'>

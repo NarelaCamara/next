@@ -1,16 +1,21 @@
 "use client";
 import { useAppDispatch, useAppSelector } from "@/app/store/Providers";
-import { addOne, removeOne } from "@/app/store/counterSice";
+import { addOne, initCounter, removeOne } from "@/app/store/counterSice";
 import * as React from "react";
+import { useEffect } from "react";
 
 export interface ICartCounterProps {
-	count: number;
+	value?: number;
 }
 
-export const CartCounter = () => {
+export const CartCounter = ({ value = 0 }: ICartCounterProps) => {
 	const count = useAppSelector((state) => state.counter.count);
 	const dispatch = useAppDispatch();
 	//const [count, setCount] = React.useState(5);
+
+	useEffect(() => {
+		dispatch(initCounter(value));
+	}, [dispatch, value]);
 
 	return (
 		<>
