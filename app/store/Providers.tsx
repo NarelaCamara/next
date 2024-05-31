@@ -5,7 +5,7 @@ import { Provider, useDispatch, useSelector } from "react-redux";
 import counterSice from "./counterSice";
 export const store = configureStore({
 	reducer: {
-		counterSice,
+		counter: counterSice,
 	},
 });
 
