@@ -5,5 +5,11 @@ interface Props {
 }
 
 export const Paragraph = ({ paragraph }: Props) => {
-  return <p>{paragraph}</p>;
+  return (
+    <div className="w-full flex">
+      <div className="w-1/2">
+        <p className="justify-start bg-slate-400 m-4">{paragraph}</p>
+      </div>
+    </div>
+  );
 };
