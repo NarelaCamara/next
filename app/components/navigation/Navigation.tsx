@@ -5,7 +5,7 @@ interface Props {}
 
 export const Navigation = (props: Props) => {
   return (
-    <div className="flex flex-row-reverse flex-nowrap">
+    <div className="flex flex-row-reverse flex-nowrap m-4">
       <div className=" w-1/2 flex flex-row justify-around items-center ">
         <span className="text-xl font-bold">Acerca de mi</span>
         <span className="text-xl font-bold">Servicios</span>

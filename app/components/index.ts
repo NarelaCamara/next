@@ -6,3 +6,4 @@ export * from "./simpleWidget/SimpleWidget";
 export * from "./buttonPrimary/ButtonPrimary";
 export * from "./paragraph/Paragraph";
 export * from "./navigation/Navigation";
+export * from "./box/Box";
