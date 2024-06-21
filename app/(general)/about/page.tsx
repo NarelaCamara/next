@@ -15,20 +15,20 @@ export default function AboutPage() {
         <Box
           leftContent={
             <div className="m-8">
-              <div className="flex flex-col my-10 mx-4">
+              <div className="flex flex-col my-10">
                 <span className="text-5xl">Roxana Narela Camara</span>
                 <span className="text-xl font-bold">
                   Semi senior frontend developer
                 </span>
               </div>
-              <span className="text-2xl font-bold m-4">
+              <span className="text-2xl font-bold my-4">
                 Sed ut perspiciatis
               </span>
               <Paragraph paragraph="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est." />
               <Paragraph paragraph="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est." />
 
               <button
-                className=" m-4 middle none center mr-3 rounded-lg border border-blue-500 py-3 px-6 font-sans text-xs font-bold text-blue-500 transition-all hover:opacity-75 focus:ring focus:bg-blue-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                className=" my-4 middle none center mr-3 rounded-lg border border-blue-500 py-3 px-6 font-sans text-xs font-bold text-blue-500 transition-all hover:opacity-75 focus:ring focus:bg-blue-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 data-ripple-dark="true"
               >
                 <span className="text-base">Download CV</span>
@@ -46,7 +46,7 @@ export default function AboutPage() {
           leftContent={<Image alt="User_photo" className=" w-2/3" src={desk} />}
           rightContent={
             <div>
-              <span className="text-2xl font-bold m-4">Nuestros valores</span>
+              <span className="text-2xl font-bold my-4">Nuestros valores</span>
               <Paragraph paragraph="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisqua." />
             </div>
           }
@@ -57,7 +57,7 @@ export default function AboutPage() {
         <Box
           leftContent={
             <div className="m-8">
-              <span className="text-2xl font-bold m-4">Nuestros valores</span>
+              <span className="text-2xl font-bold my-4">Nuestros valores</span>
               <Paragraph paragraph="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem." />
             </div>
           }
@@ -79,8 +79,30 @@ export default function AboutPage() {
           fullContent="izq"
           rightContent={
             <div className="m-8">
-              <span className="text-2xl font-bold m-4">Nuestros valores</span>
+              <span className="text-2xl font-bold">
+                Experiencia y conomicientos
+              </span>
               <Paragraph paragraph="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem." />
+              <div className="mb-7">
+                <p className="text-base text-body-color leading-loose mb-1">
+                  1 User
+                </p>
+                <p className="text-base text-body-color leading-loose mb-1">
+                  All UI components
+                </p>
+                <p className="text-base text-body-color leading-loose mb-1">
+                  Lifetime access
+                </p>
+                <p className="text-base text-body-color leading-loose mb-1">
+                  Free updates
+                </p>
+                <p className="text-base text-body-color leading-loose mb-1">
+                  Use on 1 (one) project
+                </p>
+                <p className="text-base text-body-color leading-loose mb-1">
+                  3 Months support
+                </p>
+              </div>
             </div>
           }
         />

@@ -16,7 +16,7 @@ export default function Home() {
         <Box
           leftContent={
             <>
-              <span className="text-2xl font-bold m-4">
+              <span className="text-2xl font-bold my-4">
                 Sed ut perspiciatis
               </span>
               <Paragraph
