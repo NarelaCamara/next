@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <div className="border-4 m-8 bg-white">
+      <div className="border-1 m-8 bg-white">
         <Box
           leftContent={
             <div className="m-8">
@@ -49,7 +49,7 @@ export default function AboutPage() {
         />
       </div>
 
-      <div className="border-4 m-8 bg-white">
+      <div className="border-1 m-8 bg-white">
         <Box
           leftContent={
             <div className="m-8 w-1/2 h-1/2 rounded-full">
@@ -71,7 +71,7 @@ export default function AboutPage() {
         />
       </div>
 
-      <div className="border-4 m-8 bg-white">
+      <div className="border-1 m-8 bg-white">
         <Box
           leftContent={
             <div className="m-8">
@@ -93,7 +93,7 @@ export default function AboutPage() {
         />
       </div>
 
-      <div className="border-4 m-8 bg-white">
+      <div className="border-1 m-8 bg-white">
         <Box
           leftContent={
             <Image

@@ -5,8 +5,7 @@ import desk from "./assets/altumcode-dMUt0X3f59Q-unsplash.jpg";
 
 export default function Home() {
   return (
-    <main>
-      <Navigation />
+    <>
       <div className={`flex flex-col items-center justify-center bg-white`}>
         <span className="text-5xl m-4">Roxana Narela Camara</span>
 
@@ -41,6 +40,6 @@ export default function Home() {
           }
         />
       </div>
-    </main>
+    </>
   );
 }

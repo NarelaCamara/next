@@ -26,7 +26,7 @@ export default function RootLayout({
       <Providers>
         <body className={`${monserrat.className} bg-slate-400`}>
           <Navigation />
-          {children}
+          <div className="pt-20">{children}</div>
         </body>
       </Providers>
     </html>
