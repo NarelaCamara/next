@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { Box, Paragraph } from "@/app/components";
 import desk from "../../assets/altumcode-dMUt0X3f59Q-unsplash.jpg";
+import { HomeIcon } from "@primer/octicons-react";
 
 export const metadata: Metadata = {
   title: "About",
@@ -83,24 +84,24 @@ export default function AboutPage() {
                 Experiencia y conomicientos
               </span>
               <Paragraph paragraph="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem." />
-              <div className="mb-7">
-                <p className="text-base text-body-color leading-loose mb-1">
-                  1 User
+              <div className="m-7">
+                <p className="text-base text-body-color leading-loose m-6">
+                  <HomeIcon size={24} className="mr-8" /> 1 User
                 </p>
-                <p className="text-base text-body-color leading-loose mb-1">
-                  All UI components
+                <p className="text-base text-body-color leading-loose m-6">
+                  <HomeIcon size={24} className="mr-8" /> All UI components
                 </p>
-                <p className="text-base text-body-color leading-loose mb-1">
-                  Lifetime access
+                <p className="text-base text-body-color leading-loose m-6">
+                  <HomeIcon size={24} className="mr-8" /> Lifetime access
                 </p>
-                <p className="text-base text-body-color leading-loose mb-1">
-                  Free updates
+                <p className="text-base text-body-color leading-loose m-6">
+                  <HomeIcon size={24} className="mr-8" /> Free updates
                 </p>
-                <p className="text-base text-body-color leading-loose mb-1">
-                  Use on 1 (one) project
+                <p className="text-base text-body-color leading-loose m-6">
+                  <HomeIcon size={24} className="mr-8" /> Use on 1 (one) project
                 </p>
-                <p className="text-base text-body-color leading-loose mb-1">
-                  3 Months support
+                <p className="text-base text-body-color leading-loose m-6">
+                  <HomeIcon size={24} className="mr-8" /> 3 Months support
                 </p>
               </div>
             </div>
