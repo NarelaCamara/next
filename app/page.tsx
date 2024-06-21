@@ -1,19 +1,11 @@
 import { Montserrat } from "next/font/google";
-import style from "./selfPage.module.css";
 import { Box, ButtonPrimary, Navigation, Paragraph } from "./components";
 import Image from "next/image";
 import desk from "./assets/altumcode-dMUt0X3f59Q-unsplash.jpg";
 
-const monserrat = Montserrat({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ["Arial", "sans-serif"],
-});
-
 export default function Home() {
   return (
-    <main className={`${monserrat.className}`}>
+    <main>
       <Navigation />
       <div className={`flex flex-col items-center justify-center bg-white`}>
         <span className="text-5xl m-4">Roxana Narela Camara</span>
