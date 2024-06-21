@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./store/Providers";
+import { Navigation } from "./components";
 
 export const metadata: Metadata = {
   title: "Narela",
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body className={`${monserrat.className} bg-slate-400`}>
+          <Navigation />
           {children}
         </body>
       </Providers>
