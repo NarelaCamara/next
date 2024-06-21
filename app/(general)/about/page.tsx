@@ -36,32 +36,14 @@ export default function AboutPage() {
             </div>
           }
           rightContent={
-            <div className="m-8 w-1/2 h-1/2 rounded-full">
-              <Image
-                width={350}
-                height={550}
-                alt="User_photo"
-                className=" rounded"
-                src={desk}
-              />
-            </div>
+            <Image alt="User_photo" className=" h-1/1 " src={desk} />
           }
         />
       </div>
 
       <div className="border-1 m-8 bg-white">
         <Box
-          leftContent={
-            <div className="m-8 w-1/2 h-1/2 rounded-full">
-              <Image
-                width={350}
-                height={550}
-                alt="User_photo"
-                className=" rounded"
-                src={desk}
-              />
-            </div>
-          }
+          leftContent={<Image alt="User_photo" className=" w-2/3" src={desk} />}
           rightContent={
             <div>
               <span className="text-2xl font-bold m-4">Nuestros valores</span>
@@ -80,15 +62,7 @@ export default function AboutPage() {
             </div>
           }
           rightContent={
-            <div className="m-8 w-1/2 h-1/2 rounded-full">
-              <Image
-                width={350}
-                height={550}
-                alt="User_photo"
-                className=" rounded"
-                src={desk}
-              />
-            </div>
+            <Image alt="User_photo" className=" w-2/3 " src={desk} />
           }
         />
       </div>
