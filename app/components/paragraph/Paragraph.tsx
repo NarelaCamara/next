@@ -5,5 +5,5 @@ interface Props {
 }
 
 export const Paragraph = ({ paragraph }: Props) => {
-  return <p className="justify-start m-4">{paragraph}</p>;
+  return <p className="justify-start m-4 text-base">{paragraph}</p>;
 };
