@@ -30,13 +30,7 @@ export default function Home() {
             </>
           }
           rightContent={
-            <Image
-              width={650}
-              height={650}
-              alt="User_photo"
-              className=""
-              src={desk}
-            />
+            <Image alt="User_photo" className=" w-9/12 " src={desk} />
           }
         />
       </div>
