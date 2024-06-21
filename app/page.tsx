@@ -1,6 +1,8 @@
 import { Montserrat } from "next/font/google";
 import style from "./selfPage.module.css";
 import { Box, ButtonPrimary, Navigation, Paragraph } from "./components";
+import Image from "next/image";
+import desk from "./assets/altumcode-dMUt0X3f59Q-unsplash.jpg";
 
 const monserrat = Montserrat({
   weight: ["300", "400", "500", "700"],
@@ -13,7 +15,7 @@ export default function Home() {
   return (
     <main className={`${monserrat.className}`}>
       <Navigation />
-      <div className={` flex flex-col items-center justify-center`}>
+      <div className={`flex flex-col items-center justify-center bg-white`}>
         <span className="text-5xl m-4">Roxana Narela Camara</span>
 
         <span className="text-3xl m-4">
@@ -23,7 +25,9 @@ export default function Home() {
         <Box
           leftContent={
             <>
-              <span className="text-2xl font-bold m-4">Sed ut perspiciatis</span>
+              <span className="text-2xl font-bold m-4">
+                Sed ut perspiciatis
+              </span>
               <Paragraph
                 paragraph="Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
               Neque porro quisquam est, qui dolorem. Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
@@ -35,10 +39,12 @@ export default function Home() {
             </>
           }
           rightContent={
-            <Paragraph
-              paragraph="Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-Neque porro quisquam est, qui dolorem. Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-Neque porro quisquam est, qui dolorem. Consequuntur magni dolores eos qui"
+            <Image
+              width={650}
+              height={650}
+              alt="User_photo"
+              className=""
+              src={desk}
             />
           }
         />
