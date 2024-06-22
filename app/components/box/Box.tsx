@@ -33,7 +33,11 @@ export const Box = ({
           {rightContent}
         </div>
       )}
-      {centerContent && <div className={`w-full m-8`}>{centerContent}</div>}
+      {centerContent && (
+        <div className={`w-full ${fullComponent("center", fullContent)}`}>
+          {centerContent}
+        </div>
+      )}
     </div>
   );
 };
