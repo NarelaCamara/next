@@ -123,6 +123,49 @@ export default function AboutPage() {
           </>
         }
       />
+
+      <div
+        className={`flex flex-col items-center justify-center bg-white m-8 p-8`}
+      >
+        <span className="text-5xl m-4">Hablemos de Técnologia</span>
+
+        <span className="text-3xl m-4">
+          Si esta buscando un socio confiable y comprometido en el campo de los
+          servicios de IT, no dude en contactarnos.
+        </span>
+
+        <Box
+          leftContent={
+            <div className="m-8">
+              <span className="text-2xl font-bold my-4">Contactame</span>
+              <div className="">
+                <p className="text-base text-body-color leading-loose my-6">
+                  <HomeIcon size={24} className="mr-1" /> 1 User
+                </p>
+                <p className="text-base text-body-color leading-loose my-6">
+                  <HomeIcon size={24} className="mr-1" /> All UI components
+                </p>
+                <p className="text-base text-body-color leading-loose my-6">
+                  <HomeIcon size={24} className="mr-1" /> Lifetime access
+                </p>
+                <p className="text-base text-body-color leading-loose my-6">
+                  <HomeIcon size={24} className="mr-1" /> Free updates
+                </p>
+                <p className="text-base text-body-color leading-loose my-6">
+                  <HomeIcon size={24} className="mr-1" /> Use on 1 (one) project
+                </p>
+                <p className="text-base text-body-color leading-loose my-6">
+                  <HomeIcon size={24} className="mr-1" /> 3 Months support
+                </p>
+              </div>
+            </div>
+          }
+          rightContent={
+            <Image alt="User_photo" className=" w-9/12 " src={desk} />
+          }
+          fullContent="der"
+        />
+      </div>
     </>
   );
 }
