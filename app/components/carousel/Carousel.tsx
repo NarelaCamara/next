@@ -8,7 +8,7 @@ import {
 } from "@primer/octicons-react";
 
 interface Props {
-  image: any;
+  image?: any;
 }
 
 export const Carousel = ({ image }: Props) => {

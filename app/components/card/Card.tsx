@@ -14,9 +14,16 @@ export const Card = ({ image }: Props) => {
         <span className="text-2xl font-bold my-4">Portafolio</span>
         {image && <Image alt="User_photo" className=" w-2/3" src={image} />}
         <Paragraph
-          paragraph="Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-    Neque porro quisquam est, qui dolorem. Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          paragraph="Consequuntur nesciunt.
     Neque porro quisquam est, qui dolorem. Consequuntur Neque porro quisquam est, qui dolorem."
+        />
+        <Paragraph
+          paragraph="Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+    Neque porro quisquam est,."
+        />
+        <Paragraph
+          paragraph="Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+    Neque porro quisquam est."
         />
       </div>
       <div className="p-6 pt-0">

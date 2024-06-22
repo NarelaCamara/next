@@ -102,8 +102,24 @@ export default function AboutPage() {
               Neque porro quisquam est, qui dolorem"
             />
 
-            
             <Carousel image={desk} />
+          </>
+        }
+      />
+
+      <Box
+        centerContent={
+          <>
+            <span className="text-2xl font-bold my-4">
+              Experiencia y conomicientos
+            </span>
+            <Paragraph
+              paragraph="Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+              Neque porro quisquam est, qui dolorem. Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+              Neque porro quisquam est, qui dolorem."
+            />
+
+            <Carousel />
           </>
         }
       />
