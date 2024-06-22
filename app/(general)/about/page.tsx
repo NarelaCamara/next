@@ -14,7 +14,7 @@ export default function AboutPage() {
     <>
       <Box
         leftContent={
-          <div className="m-8">
+          <div>
             <div className="flex flex-col my-10">
               <span className="text-5xl">Roxana Narela Camara</span>
               <span className="text-xl font-bold">
@@ -43,7 +43,7 @@ export default function AboutPage() {
 
       <Box
         leftContent={
-          <div className="m-8">
+          <div>
             <span className="text-2xl font-bold my-4">Nuestros valores</span>
             <Paragraph paragraph="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem." />
           </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
         }
         fullContent="izq"
         rightContent={
-          <div className="m-8">
+          <div>
             <span className="text-2xl font-bold">
               Experiencia y conomicientos
             </span>

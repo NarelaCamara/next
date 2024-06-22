@@ -13,8 +13,8 @@ interface Props {
 
 export const Carousel = ({ image }: Props) => {
   return (
-    <section className="p-8 w-full">
-      <div className="w-2/2 flex flex-row flex-nowrap bg-white m-8 justify-end">
+    <section className="p-4 w-full">
+      <div className="w-2/2 flex flex-row flex-nowrap bg-white m-0 justify-end">
         <DotFillIcon size={16} className="opacity-60" />
         <DotFillIcon size={16} className="opacity-60" />
         <DotIcon size={16} className="opacity-60" />

@@ -18,7 +18,7 @@ export const Box = ({
     name: ATRIBUTE_FULL_CONTENT,
     fullContent: ATRIBUTE_FULL_CONTENT
   ) => {
-    return name === fullContent || name === fullContent ? "" : "m-8";
+    return name === fullContent || name === fullContent ? "" : "m-20";
   };
 
   return (
