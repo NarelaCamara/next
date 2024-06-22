@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonPrimary } from "../buttonPrimary/ButtonPrimary";
+import { Button } from "../button/Button";
 
 interface Props {}
 
@@ -10,7 +10,7 @@ export const Navigation = (props: Props) => {
         <span className="text-xl font-bold">Acerca de mi</span>
         <span className="text-xl font-bold">Servicios</span>
         <span className="text-xl font-bold">Portafolio</span>
-        <ButtonPrimary text={"Contactame!"} />
+        <Button text={"Contactame!"} />
       </div>
     </div>
   );

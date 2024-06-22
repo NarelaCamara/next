@@ -1,5 +1,5 @@
 import { Montserrat } from "next/font/google";
-import { Box, ButtonPrimary, Navigation, Paragraph } from "./components";
+import { Box, Button, Navigation, Paragraph } from "./components";
 import Image from "next/image";
 import desk from "./assets/altumcode-dMUt0X3f59Q-unsplash.jpg";
 
@@ -26,7 +26,7 @@ export default function Home() {
               Neque porro quisquam est, qui dolorem. Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
               Neque porro quisquam est, qui dolorem"
               />
-              <ButtonPrimary text={"Ver más!"} />
+              <Button text={"Ver más!"} />
             </>
           }
           rightContent={
